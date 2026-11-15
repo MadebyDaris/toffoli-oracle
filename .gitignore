@@ -1,0 +1,15 @@
+# local checkouts of mockturtle / caterpillar / tweedledum (scripts/fetch_third_party.sh)
+third_party/
+build/
+sandbox/*/build/
+bench/xag/
+sandbox/mockturtle/out/
+.venv/
+.vscode/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+# your own experiments, kept out of git
+sandbox/scratch/
+# private notes: proposal, architecture, comparisons (README must not link here)
+docs/

@@ -1,0 +1,495 @@
+diff --git a/python/tweedledum/bindings.cpp b/python/tweedledum/bindings.cpp
+index 9cc578b..b510a32 100644
+--- a/python/tweedledum/bindings.cpp
++++ b/python/tweedledum/bindings.cpp
+@@ -2,6 +2,13 @@
+ | Part of Tweedledum Project.  This file is distributed under the MIT License.
+ | See accompanying file /LICENSE for details.
+ *-----------------------------------------------------------------------------*/
++#include <nanobind/stl/vector.h>
++#include <nanobind/stl/string.h>
++#include <nanobind/stl/tuple.h>
++#include <nanobind/stl/pair.h>
++#include <nanobind/stl/map.h>
++#include <nanobind/stl/unordered_map.h>
++#include <nanobind/stl/optional.h>
+ #include "bindings.h"
+ 
+ #include "ir/circuit.h"
+diff --git a/python/tweedledum/classical/kitty.cpp b/python/tweedledum/classical/kitty.cpp
+index ff44d2d..588dc88 100644
+--- a/python/tweedledum/classical/kitty.cpp
++++ b/python/tweedledum/classical/kitty.cpp
+@@ -2,6 +2,11 @@
+ | Part of Tweedledum Project.  This file is distributed under the MIT License.
+ | See accompanying file /LICENSE for details.
+ *-----------------------------------------------------------------------------*/
++#include <nanobind/stl/tuple.h>
++#include <nanobind/stl/pair.h>
++#include <nanobind/stl/map.h>
++#include <nanobind/stl/unordered_map.h>
++#include <nanobind/stl/optional.h>
+ #include <kitty/kitty.hpp>
+ #include <nanobind/nanobind.h>
+ #include <nanobind/operators.h>
+diff --git a/python/tweedledum/classical/mockturtle.cpp b/python/tweedledum/classical/mockturtle.cpp
+index 57fc2a8..6a8bb78 100644
+--- a/python/tweedledum/classical/mockturtle.cpp
++++ b/python/tweedledum/classical/mockturtle.cpp
+@@ -2,6 +2,11 @@
+ | Part of Tweedledum Project.  This file is distributed under the MIT License.
+ | See accompanying file /LICENSE for details.
+ *-----------------------------------------------------------------------------*/
++#include <nanobind/stl/tuple.h>
++#include <nanobind/stl/pair.h>
++#include <nanobind/stl/map.h>
++#include <nanobind/stl/unordered_map.h>
++#include <nanobind/stl/optional.h>
+ #include <mockturtle/algorithms/exorcism.hpp>
+ #include <mockturtle/io/aiger_reader.hpp>
+ #include <mockturtle/io/dimacs_reader.hpp>
+diff --git a/python/tweedledum/classical/utils.cpp b/python/tweedledum/classical/utils.cpp
+index 5e99727..527e7aa 100644
+--- a/python/tweedledum/classical/utils.cpp
++++ b/python/tweedledum/classical/utils.cpp
+@@ -2,6 +2,12 @@
+ | Part of Tweedledum Project.  This file is distributed under the MIT License.
+ | See accompanying file /LICENSE for details.
+ *-----------------------------------------------------------------------------*/
++#include <nanobind/stl/string.h>
++#include <nanobind/stl/tuple.h>
++#include <nanobind/stl/pair.h>
++#include <nanobind/stl/map.h>
++#include <nanobind/stl/unordered_map.h>
++#include <nanobind/stl/optional.h>
+ #include <nanobind/nanobind.h>
+ #include <nanobind/stl/vector.h>
+ #include <tweedledum/Utils/Classical/xag_optimize.h>
+diff --git a/python/tweedledum/ir/circuit.cpp b/python/tweedledum/ir/circuit.cpp
+index 073d5be..4220d49 100644
+--- a/python/tweedledum/ir/circuit.cpp
++++ b/python/tweedledum/ir/circuit.cpp
+@@ -2,6 +2,11 @@
+ | Part of Tweedledum Project.  This file is distributed under the MIT License.
+ | See accompanying file /LICENSE for details.
+ *-----------------------------------------------------------------------------*/
++#include <nanobind/stl/tuple.h>
++#include <nanobind/stl/pair.h>
++#include <nanobind/stl/map.h>
++#include <nanobind/stl/unordered_map.h>
++#include <nanobind/stl/optional.h>
+ #include "circuit.h"
+ 
+ #include <nanobind/make_iterator.h>
+diff --git a/python/tweedledum/ir/instruction.cpp b/python/tweedledum/ir/instruction.cpp
+index ef7f081..1431cac 100644
+--- a/python/tweedledum/ir/instruction.cpp
++++ b/python/tweedledum/ir/instruction.cpp
+@@ -2,6 +2,11 @@
+ | Part of Tweedledum Project.  This file is distributed under the MIT License.
+ | See accompanying file /LICENSE for details.
+ *-----------------------------------------------------------------------------*/
++#include <nanobind/stl/tuple.h>
++#include <nanobind/stl/pair.h>
++#include <nanobind/stl/map.h>
++#include <nanobind/stl/unordered_map.h>
++#include <nanobind/stl/optional.h>
+ #include "../operators/operators.h"
+ 
+ #include <nanobind/stl/string.h>
+diff --git a/python/tweedledum/ir/wires.cpp b/python/tweedledum/ir/wires.cpp
+index 85bf36e..dd82e5e 100644
+--- a/python/tweedledum/ir/wires.cpp
++++ b/python/tweedledum/ir/wires.cpp
+@@ -2,6 +2,13 @@
+ | Part of Tweedledum Project.  This file is distributed under the MIT License.
+ | See accompanying file /LICENSE for details.
+ *-----------------------------------------------------------------------------*/
++#include <nanobind/stl/vector.h>
++#include <nanobind/stl/string.h>
++#include <nanobind/stl/tuple.h>
++#include <nanobind/stl/pair.h>
++#include <nanobind/stl/map.h>
++#include <nanobind/stl/unordered_map.h>
++#include <nanobind/stl/optional.h>
+ #include <nanobind/nanobind.h>
+ #include <nanobind/operators.h>
+ #include <tweedledum/IR/Cbit.h>
+diff --git a/python/tweedledum/operators/extension.cpp b/python/tweedledum/operators/extension.cpp
+index 39a7800..ad7f993 100644
+--- a/python/tweedledum/operators/extension.cpp
++++ b/python/tweedledum/operators/extension.cpp
+@@ -2,6 +2,12 @@
+ | Part of Tweedledum Project.  This file is distributed under the MIT License.
+ | See accompanying file /LICENSE for details.
+ *-----------------------------------------------------------------------------*/
++#include <nanobind/stl/string.h>
++#include <nanobind/stl/tuple.h>
++#include <nanobind/stl/pair.h>
++#include <nanobind/stl/map.h>
++#include <nanobind/stl/unordered_map.h>
++#include <nanobind/stl/optional.h>
+ #include "operators.h"
+ 
+ #include <kitty/kitty.hpp>
+diff --git a/python/tweedledum/operators/ising.cpp b/python/tweedledum/operators/ising.cpp
+index cb5b0d6..d40ee12 100644
+--- a/python/tweedledum/operators/ising.cpp
++++ b/python/tweedledum/operators/ising.cpp
+@@ -2,6 +2,13 @@
+ | Part of Tweedledum Project.  This file is distributed under the MIT License.
+ | See accompanying file /LICENSE for details.
+ *-----------------------------------------------------------------------------*/
++#include <nanobind/stl/vector.h>
++#include <nanobind/stl/string.h>
++#include <nanobind/stl/tuple.h>
++#include <nanobind/stl/pair.h>
++#include <nanobind/stl/map.h>
++#include <nanobind/stl/unordered_map.h>
++#include <nanobind/stl/optional.h>
+ #include "operators.h"
+ 
+ void init_ising_operators(nanobind::module_& module)
+diff --git a/python/tweedledum/operators/meta.cpp b/python/tweedledum/operators/meta.cpp
+index 158586c..917231a 100644
+--- a/python/tweedledum/operators/meta.cpp
++++ b/python/tweedledum/operators/meta.cpp
+@@ -2,6 +2,13 @@
+ | Part of Tweedledum Project.  This file is distributed under the MIT License.
+ | See accompanying file /LICENSE for details.
+ *-----------------------------------------------------------------------------*/
++#include <nanobind/stl/vector.h>
++#include <nanobind/stl/string.h>
++#include <nanobind/stl/tuple.h>
++#include <nanobind/stl/pair.h>
++#include <nanobind/stl/map.h>
++#include <nanobind/stl/unordered_map.h>
++#include <nanobind/stl/optional.h>
+ #include "operators.h"
+ 
+ void init_meta_operators(nanobind::module_& module)
+diff --git a/python/tweedledum/operators/standard.cpp b/python/tweedledum/operators/standard.cpp
+index 2e60561..d2f08ff 100644
+--- a/python/tweedledum/operators/standard.cpp
++++ b/python/tweedledum/operators/standard.cpp
+@@ -2,6 +2,13 @@
+ | Part of Tweedledum Project.  This file is distributed under the MIT License.
+ | See accompanying file /LICENSE for details.
+ *-----------------------------------------------------------------------------*/
++#include <nanobind/stl/vector.h>
++#include <nanobind/stl/string.h>
++#include <nanobind/stl/tuple.h>
++#include <nanobind/stl/pair.h>
++#include <nanobind/stl/map.h>
++#include <nanobind/stl/unordered_map.h>
++#include <nanobind/stl/optional.h>
+ #include "operators.h"
+ 
+ void init_std_operators(nanobind::module_& module)
+diff --git a/python/tweedledum/passes/passes.cpp b/python/tweedledum/passes/passes.cpp
+index 7bdb628..a681445 100644
+--- a/python/tweedledum/passes/passes.cpp
++++ b/python/tweedledum/passes/passes.cpp
+@@ -2,6 +2,12 @@
+ | Part of Tweedledum Project.  This file is distributed under the MIT License.
+ | See accompanying file /LICENSE for details.
+ *-----------------------------------------------------------------------------*/
++#include <nanobind/stl/string.h>
++#include <nanobind/stl/tuple.h>
++#include <nanobind/stl/pair.h>
++#include <nanobind/stl/map.h>
++#include <nanobind/stl/unordered_map.h>
++#include <nanobind/stl/optional.h>
+ #include "../nlohmann_json.h"
+ 
+ #include <nanobind/nanobind.h>
+@@ -38,17 +44,17 @@ void init_Passes(nanobind::module_& module)
+     // Decomposition
+     module.def("barenco_decomp",
+         nb::overload_cast<Circuit const&, nlohmann::json const&>(&barenco_decomp),
+-        nb::arg("circuit"), nb::arg("config") = nlohmann::json(),
++        nb::arg("circuit"), nb::arg("config").none() = nlohmann::json(),
+         "Barrenco decomposition pass.");
+ 
+     module.def("bridge_decomp",
+         nb::overload_cast<Device const&, Circuit const&, nlohmann::json const&>(&bridge_decomp),
+-        nb::arg("device"), nb::arg("circuit"), nb::arg("config") = nlohmann::json(),
++        nb::arg("device"), nb::arg("circuit"), nb::arg("config").none() = nlohmann::json(),
+         "Bridge operators decomposition pass.");
+ 
+     module.def("parity_decomp",
+         nb::overload_cast<Circuit const&, nlohmann::json const&>(&parity_decomp),
+-        nb::arg("circuit"), nb::arg("config") = nlohmann::json(),
++        nb::arg("circuit"), nb::arg("config").none() = nlohmann::json(),
+         "Parity operators decomposition pass.");
+ 
+     // Mapping
+@@ -62,13 +68,13 @@ void init_Passes(nanobind::module_& module)
+     module.def("gate_cancellation", &gate_cancellation, "Gate cancellation optimization.");
+ 
+     module.def("linear_resynth", &linear_resynth,
+-        nb::arg("original"), nb::arg("config") = nlohmann::json(),
++        nb::arg("original"), nb::arg("config").none() = nlohmann::json(),
+         "Resynthesize linear parts of the quantum circuit.");
+ 
+     module.def("phase_folding", &phase_folding, "Phase folding optimization.");
+ 
+     module.def("steiner_resynth", &steiner_resynth,
+-        nb::arg("device"), nb::arg("original"), nb::arg("config") = nlohmann::json(),
++        nb::arg("device"), nb::arg("original"), nb::arg("config").none() = nlohmann::json(),
+         "Coupling-aware resynthesize linear parts of the quantum circuit.");
+ 
+     // Utility
+diff --git a/python/tweedledum/synthesis/synthesis.cpp b/python/tweedledum/synthesis/synthesis.cpp
+index 7f89616..93333b3 100644
+--- a/python/tweedledum/synthesis/synthesis.cpp
++++ b/python/tweedledum/synthesis/synthesis.cpp
+@@ -2,6 +2,12 @@
+ | Part of Tweedledum Project.  This file is distributed under the MIT License.
+ | See accompanying file /LICENSE for details.
+ *-----------------------------------------------------------------------------*/
++#include <nanobind/stl/string.h>
++#include <nanobind/stl/tuple.h>
++#include <nanobind/stl/pair.h>
++#include <nanobind/stl/map.h>
++#include <nanobind/stl/unordered_map.h>
++#include <nanobind/stl/optional.h>
+ #include "../my_bool.h"
+ #include "../nlohmann_json.h"
+ 
+@@ -21,21 +27,21 @@ void init_Synthesis(nanobind::module_& module)
+ 
+     module.def("a_star_swap_synth", 
+         nb::overload_cast<Device const&, std::vector<uint32_t> const&, std::vector<uint32_t> const&, nlohmann::json const&>(&a_star_swap_synth),
+-        nb::arg("device"), nb::arg("init_cfg"), nb::arg("final_cfg"), nb::arg("config") = nlohmann::json(),
++        nb::arg("device"), nb::arg("init_cfg"), nb::arg("final_cfg"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesize a quantum swap circuit.");
+ 
+     module.def("cx_dihedral_synth",
+         [](BoolArray2D linear_trans, LinPhasePoly const& parities, nlohmann::json const& config) {
+             return cx_dihedral_synth(python::to_bmatrix(linear_trans), parities, config);
+         },
+-        nb::arg("linear_trans"), nb::arg("parities"), nb::arg("config") = nlohmann::json(),
++        nb::arg("linear_trans"), nb::arg("parities"), nb::arg("config").none() = nlohmann::json(),
+         "Optimal synthesis of a CNOT-dihedral circuits.");
+ 
+     module.def("cx_dihedral_synth",
+         [](Circuit& circuit, std::vector<Qubit> const& qubits, std::vector<Cbit> const& cbits, BoolArray2D linear_trans, LinPhasePoly parities, nlohmann::json const& config) {
+             cx_dihedral_synth(circuit, qubits, cbits, python::to_bmatrix(linear_trans), std::move(parities), config);
+         },
+-        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("linear_trans"), nb::arg("parities"), nb::arg("config") = nlohmann::json(),
++        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("linear_trans"), nb::arg("parities"), nb::arg("config").none() = nlohmann::json(),
+         "Optimal synthesis of a CNOT-dihedral circuits.");
+ 
+     module.def("decomp_synth",
+@@ -48,125 +54,125 @@ void init_Synthesis(nanobind::module_& module)
+ 
+     module.def("diagonal_synth",
+         nb::overload_cast<std::vector<double> const&, nlohmann::json const&>(&diagonal_synth),
+-        nb::arg("angles"), nb::arg("config") = nlohmann::json(),
++        nb::arg("angles"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesis of diagonal unitary matrices.");
+ 
+     module.def("diagonal_synth", 
+         nb::overload_cast<Circuit&, std::vector<Qubit>, std::vector<Cbit> const&, std::vector<double> const&, nlohmann::json const&>(&diagonal_synth),
+-        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("angles"), nb::arg("config") = nlohmann::json(),
++        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("angles"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesis of diagonal unitary matrices.");
+ 
+     module.def("gray_synth",
+         nb::overload_cast<uint32_t, LinPhasePoly const&, nlohmann::json const&>(&gray_synth),
+-        nb::arg("num_qubits"), nb::arg("parities"), nb::arg("config") = nlohmann::json(),
++        nb::arg("num_qubits"), nb::arg("parities"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesis of a CNOT-dihedral circuits.");
+ 
+     module.def("gray_synth",
+         [](Circuit& circuit, std::vector<Qubit> const& qubits, std::vector<Cbit> const& cbits, BoolArray2D linear_trans, LinPhasePoly parities, nlohmann::json const& config) {
+             gray_synth(circuit, qubits, cbits, python::to_bmatrix(linear_trans), std::move(parities), config);
+         },
+-        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("linear_trans"), nb::arg("parities"), nb::arg("config") = nlohmann::json(),
++        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("linear_trans"), nb::arg("parities"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesis of a CNOT-dihedral circuits.");
+ 
+     module.def("lhrs_synth",
+         nb::overload_cast<mockturtle::xag_network const&, nlohmann::json const&>(&lhrs_synth),
+-        nb::arg("xag"), nb::arg("config") = nlohmann::json(),
++        nb::arg("xag"), nb::arg("config").none() = nlohmann::json(),
+         "LUT-based Hierarchical Synthesis from a XAG representation.");
+ 
+     module.def("lhrs_synth",
+         nb::overload_cast<Circuit&, std::vector<Qubit> const&, std::vector<Cbit> const&, mockturtle::xag_network const&, nlohmann::json const&>(&lhrs_synth),
+-        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("xag"), nb::arg("config") = nlohmann::json(),
++        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("xag"), nb::arg("config").none() = nlohmann::json(),
+         "LUT-based Hierarchical Synthesis inplace from a XAG representation.");
+ 
+     module.def("linear_synth",
+         [](BoolArray2D matrix, nlohmann::json const& config) {
+             return linear_synth(python::to_bmatrix(matrix), config);
+         },
+-        nb::arg("matrix"), nb::arg("config") = nlohmann::json(),
++        nb::arg("matrix"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesis of linear reversible circuits (CNOT synthesis).");
+ 
+     module.def("linear_synth",
+         [](Circuit& circuit, std::vector<Qubit> const& qubits, std::vector<Cbit> const& cbits, BoolArray2D matrix, nlohmann::json const& config) {
+             linear_synth(circuit, qubits, cbits, python::to_bmatrix(matrix), config);
+         },
+-        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("matrix"), nb::arg("config") = nlohmann::json(),
++        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("matrix"), nb::arg("config").none() = nlohmann::json(),
+         "Reversible synthesis based on functional decomposition.");
+ 
+     module.def("pkrm_synth",
+         nb::overload_cast<kitty::dynamic_truth_table const&, nlohmann::json const&>(&pkrm_synth),
+-        nb::arg("function"), nb::arg("config") = nlohmann::json(),
++        nb::arg("function"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesize a quantum circuit from a function by computing PKRM representation.");
+ 
+     module.def("pkrm_synth",
+         nb::overload_cast<Circuit&, std::vector<Qubit> const&, std::vector<Cbit> const&, kitty::dynamic_truth_table const&, nlohmann::json const&>(&pkrm_synth),
+-        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("function"), nb::arg("config") = nlohmann::json(),
++        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("function"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesize a quantum circuit inplace from a function by computing PKRM representation.");
+ 
+     module.def("pprm_synth", 
+         nb::overload_cast<kitty::dynamic_truth_table const&, nlohmann::json const&>(&pprm_synth),
+-        nb::arg("function"), nb::arg("config") = nlohmann::json(),
++        nb::arg("function"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesize a quantum circuit from a function by computing PPRM representation.");
+ 
+     module.def("pprm_synth", 
+         nb::overload_cast<Circuit&, std::vector<Qubit> const&, std::vector<Cbit> const&, kitty::dynamic_truth_table const&, nlohmann::json const&>(&pprm_synth),
+-        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("function"), nb::arg("config") = nlohmann::json(),
++        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("function"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesize a quantum circuit inplace from a function by computing PPRM representation.");
+ 
+     module.def("sat_linear_synth",
+         [](BoolArray2D matrix, nlohmann::json const& config) {
+             return sat_linear_synth(python::to_bmatrix(matrix), config);
+         },
+-        nb::arg("matrix"), nb::arg("config") = nlohmann::json(),
++        nb::arg("matrix"), nb::arg("config").none() = nlohmann::json(),
+         "SAT-based synthesis of linear reversible circuits (CNOT synthesis).");
+ 
+     module.def("sat_linear_synth",
+         [](Circuit& circuit, std::vector<Qubit> const& qubits, std::vector<Cbit> const& cbits, BoolArray2D matrix, nlohmann::json const& config) {
+             sat_linear_synth(circuit, qubits, cbits, python::to_bmatrix(matrix), config);
+         },
+-        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("matrix"), nb::arg("config") = nlohmann::json(),
++        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("matrix"), nb::arg("config").none() = nlohmann::json(),
+         "SAT-based synthesis of linear reversible circuits (CNOT synthesis).");
+ 
+     module.def("sat_linear_synth",
+         [](Device const& device, BoolArray2D matrix, nlohmann::json const& config) {
+             return sat_linear_synth(device, python::to_bmatrix(matrix), config);
+         },
+-        nb::arg("device"), nb::arg("matrix"), nb::arg("config") = nlohmann::json(),
++        nb::arg("device"), nb::arg("matrix"), nb::arg("config").none() = nlohmann::json(),
+         "SAT-based synthesis of linear reversible circuits (CNOT synthesis).");
+ 
+     module.def("sat_linear_synth",
+         [](Device const& device, Circuit& circuit, BoolArray2D matrix, nlohmann::json const& config) {
+             sat_linear_synth(device, circuit, python::to_bmatrix(matrix), config);
+         },
+-        nb::arg("device"), nb::arg("circuit"), nb::arg("matrix"), nb::arg("config") = nlohmann::json(),
++        nb::arg("device"), nb::arg("circuit"), nb::arg("matrix"), nb::arg("config").none() = nlohmann::json(),
+         "SAT-based synthesis of linear reversible circuits (CNOT synthesis).");
+ 
+     module.def("sat_swap_synth", 
+         nb::overload_cast<Device const&, std::vector<uint32_t> const&, std::vector<uint32_t> const&, nlohmann::json const&>(&sat_swap_synth),
+-        nb::arg("device"), nb::arg("init_cfg"), nb::arg("final_cfg"), nb::arg("config") = nlohmann::json(),
++        nb::arg("device"), nb::arg("init_cfg"), nb::arg("final_cfg"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesize a quantum swap circuit.");
+ 
+     module.def("spectrum_synth", 
+         nb::overload_cast<kitty::dynamic_truth_table const&, nlohmann::json const&>(&spectrum_synth),
+-        nb::arg("function"), nb::arg("config") = nlohmann::json(),
++        nb::arg("function"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesize a quantum circuit from a function by computing the Rademacher-Walsh spectrum.");
+ 
+     module.def("spectrum_synth", 
+         nb::overload_cast<Circuit&, std::vector<Qubit> const&, std::vector<Cbit> const&, kitty::dynamic_truth_table const&, nlohmann::json const&>(&spectrum_synth),
+-        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("function"), nb::arg("config") = nlohmann::json(),
++        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("function"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesize a quantum circuit inplace from a function by computing the Rademacher-Walsh spectrum.");
+ 
+     module.def("steiner_gauss_synth",
+         [](Device const& device, BoolArray2D matrix, nlohmann::json const& config) {
+             return steiner_gauss_synth(device, python::to_bmatrix(matrix), config);
+         },
+-        nb::arg("device"), nb::arg("matrix"), nb::arg("config") = nlohmann::json(),
++        nb::arg("device"), nb::arg("matrix"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesis of coupled constrained linear reversible circuits (CNOT synthesis).");
+ 
+     module.def("steiner_gauss_synth",
+         [](Circuit& circuit, Device const& device, BoolArray2D matrix, nlohmann::json const& config) {
+             steiner_gauss_synth(circuit, device, python::to_bmatrix(matrix), config);
+         },
+-        nb::arg("circuit"), nb::arg("device"), nb::arg("matrix"), nb::arg("config") = nlohmann::json(),
++        nb::arg("circuit"), nb::arg("device"), nb::arg("matrix"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesis of coupled constrained linear reversible circuits (CNOT synthesis).");
+ 
+     module.def("transform_synth", 
+@@ -179,11 +185,11 @@ void init_Synthesis(nanobind::module_& module)
+ 
+     module.def("xag_synth", 
+         nb::overload_cast<mockturtle::xag_network const&, nlohmann::json const&>(&xag_synth),
+-        nb::arg("xag"), nb::arg("config") = nlohmann::json(),
++        nb::arg("xag"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesize a quantum circuit from a XAG representation.");
+ 
+     module.def("xag_synth",
+         nb::overload_cast<Circuit&, std::vector<Qubit> const&, std::vector<Cbit> const&, mockturtle::xag_network const&, nlohmann::json const&>(&xag_synth),
+-        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("xag"), nb::arg("config") = nlohmann::json(),
++        nb::arg("circuit"), nb::arg("qubits"), nb::arg("cbits"), nb::arg("xag"), nb::arg("config").none() = nlohmann::json(),
+         "Synthesize a quantum circuit inplace from a XAG representation.");
+ }
+diff --git a/python/tweedledum/target/device.cpp b/python/tweedledum/target/device.cpp
+index 1b9ce24..1f98ba0 100644
+--- a/python/tweedledum/target/device.cpp
++++ b/python/tweedledum/target/device.cpp
+@@ -2,6 +2,11 @@
+ | Part of Tweedledum Project.  This file is distributed under the MIT License.
+ | See accompanying file /LICENSE for details.
+ *-----------------------------------------------------------------------------*/
++#include <nanobind/stl/tuple.h>
++#include <nanobind/stl/pair.h>
++#include <nanobind/stl/map.h>
++#include <nanobind/stl/unordered_map.h>
++#include <nanobind/stl/optional.h>
+ #include "../nlohmann_json.h"
+ 
+ #include <nanobind/nanobind.h>
+diff --git a/python/tweedledum/target/mapping.cpp b/python/tweedledum/target/mapping.cpp
+index b1a509b..94809c7 100644
+--- a/python/tweedledum/target/mapping.cpp
++++ b/python/tweedledum/target/mapping.cpp
+@@ -2,6 +2,12 @@
+ | Part of Tweedledum Project.  This file is distributed under the MIT License.
+ | See accompanying file /LICENSE for details.
+ *-----------------------------------------------------------------------------*/
++#include <nanobind/stl/string.h>
++#include <nanobind/stl/tuple.h>
++#include <nanobind/stl/pair.h>
++#include <nanobind/stl/map.h>
++#include <nanobind/stl/unordered_map.h>
++#include <nanobind/stl/optional.h>
+ #include <nanobind/nanobind.h>
+ #include <nanobind/stl/vector.h>
+ #include <tweedledum/Target/Mapping.h>
+diff --git a/python/tweedledum/utils/utils.cpp b/python/tweedledum/utils/utils.cpp
+index 2c0fe77..f1805a6 100644
+--- a/python/tweedledum/utils/utils.cpp
++++ b/python/tweedledum/utils/utils.cpp
+@@ -2,6 +2,12 @@
+ | Part of Tweedledum Project.  This file is distributed under the MIT License.
+ | See accompanying file /LICENSE for details.
+ *-----------------------------------------------------------------------------*/
++#include <nanobind/stl/string.h>
++#include <nanobind/stl/tuple.h>
++#include <nanobind/stl/pair.h>
++#include <nanobind/stl/map.h>
++#include <nanobind/stl/unordered_map.h>
++#include <nanobind/stl/optional.h>
+ #include <nanobind/nanobind.h>
+ #include <nanobind/stl/vector.h>
+ #include <tweedledum/Utils/Cut.h>

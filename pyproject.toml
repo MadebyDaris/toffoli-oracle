@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toffoli-oracle"
+version = "0.0.1"
+description = "Verified compiler from classical logic (XAGs) to Toffoli-native quantum oracles with honest resource reports"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Daris Idirene" }]
+# 3.10 so the same package also installs into the tweedledum sandbox env (tweedledum wheels stop at 3.10)
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+qiskit = ["qiskit>=2.0", "qiskit-aer>=0.17"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+toffoli-oracle = "toffoli_oracle.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
