@@ -1,0 +1,15 @@
+[project]
+name = "toffoli-oracle-kirin"
+version = "0.0.1"
+description = "Showcase: write oracles in Python with a Kirin XAG dialect, optimize with toffoli-oracle/mockturtle"
+requires-python = ">=3.10"
+dependencies = [
+    "kirin-toolchain",
+    "toffoli-oracle",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+toffoli-oracle = { path = "..", editable = true }
